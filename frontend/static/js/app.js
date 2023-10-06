@@ -1,42 +1,41 @@
-import axios from 'axios';
-    
+d3.json('/movies').then((data)=>{console.log(data)})
 
-const BASE_URL = 'http://127.0.0.1:9090';
+// const BASE_URL = 'http://127.0.0.1:9090';
 
-//request the desired dataset from the API
-async function getDataset() { //async allows your code to run in the background without blocking the execution of other code.
-    try {
-        const response = await axios.get(`${BASE_URL}/`) //The await operator is used to wait for a Promise and get its fulfillment value. axios.get returns a promise
+// //request the desired dataset from the API
+// async function getDataset() { //async allows your code to run in the background without blocking the execution of other code.
+//     try {
+//         const response = await axios.get(`${BASE_URL}/`) //The await operator is used to wait for a Promise and get its fulfillment value. axios.get returns a promise
 
-        const dataset = response.data; //The axios response schema contains data, status, statusText, headers, congif, and request. Data is the response
-        return dataset;
-        console.log(dataset);
-    } catch (errors) {
-        console.error(errors);
-    }
-}
+//         const dataset = response.data; //The axios response schema contains data, status, statusText, headers, congif, and request. Data is the response
+//         return dataset;
+//         console.log(dataset);
+//     } catch (errors) {
+//         console.error(errors);
+//     }
+// }
 
-function buildCharts(){
-   data = getDataset();
+// function buildCharts(){
+//    data = getDataset();
 
-    var highestGrossing = 
+//     var highestGrossing = 
 
-   let barLayout = {
-    title: 'Top 10 grossing movies',
-    margin: {t: 30, l: 150}
-   }
+//    let barLayout = {
+//     title: 'Top 10 grossing movies',
+//     margin: {t: 30, l: 150}
+//    }
 
-   let barData = [
-    {
-        y: highestGrossing.get,
-        x: gross,
-        text:,
-        type: "bar",
-        orientation: "h"
-    }
-]
-Plotly.newPlot("bar", barData, barLayout);
-}
+//    let barData = [
+//     {
+//         y: highestGrossing.get,
+//         x: gross,
+//         text:,
+//         type: "bar",
+//         orientation: "h"
+//     }
+// ]
+// Plotly.newPlot("bar", barData, barLayout);
+// }
 
 
 //function buildCharts(sample){
