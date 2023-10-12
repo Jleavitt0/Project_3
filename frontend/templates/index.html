@@ -19,14 +19,15 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-3">
         <div class="well">
-          <h5>Test Subject ID No.:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <h5>Genre:</h5>
+            <select id="genre-dropdown" onchange="optionChanged(this.value)">
+            </select>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
+            <h3 class="panel-title">Highest Gross Movie</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>
         </div>
@@ -42,6 +43,11 @@
       <div class="col-md-12">
         <div id="bubble"></div>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="bar-chart"></div>
     </div>
   </div>
 
